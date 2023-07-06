@@ -3,8 +3,10 @@
 	align-items: center;
 	justify-content: center;
 	gap: 66px 32px;
+	margin: 0;
 
 	flex-wrap: wrap;
+	padding: 50px 0;
 }
 
 .item {
@@ -67,4 +69,19 @@
 
 .btn {
 	align-self: start;
+}
+
+.image {
+	position: relative;
+
+	& button {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	& svg {
+		width: 25px;
+		height: 25px;
+	}
 }

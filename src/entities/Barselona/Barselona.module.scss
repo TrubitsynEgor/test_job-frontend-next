@@ -1,0 +1,40 @@
+.barselona {
+	min-height: 400px;
+	background-color: var(--accent);
+	width: 100%;
+	margin-top: 70px;
+	margin-bottom: 40px;
+
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 0;
+
+}
+
+.left {
+
+	& h1,
+	h3 {
+		text-align: left;
+		margin: 20px 0;
+	}
+}
+
+.right {
+	transform: translateY(-25%);
+}
+
+.btn {
+	background-color: var(--light) !important;
+	border: none !important;
+	padding: 14px 24px;
+
+	&:hover {
+		background-color: var(--dark) !important;
+		color: var(--light) !important;
+	}
+}

@@ -6,6 +6,7 @@ import { Button, DetailsUlProps, IProducts } from '@/shared'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { priceRu } from '@/helpers'
+import { BsHeart } from 'react-icons/bs'
 
 interface ProductsListProps extends DetailsUlProps {
   products: IProducts[]
@@ -20,13 +21,18 @@ export const ProductsList: FC<ProductsListProps> = ({
     <ul className={cn(styles.list, className)}>
       {products.map((el) => (
         <li key={el.id} className={styles.item}>
-          <Image
-            src={el.images[0].path}
-            width={330}
-            height={200}
-            alt={`Product ${el.id}`}
-            priority
-          />
+          <div className={styles.image}>
+            <Image
+              src={el.images[0].path}
+              width={330}
+              height={200}
+              alt={`Product ${el.id}`}
+              priority
+            />
+            <Button appearance="link">
+              <BsHeart />
+            </Button>
+          </div>
 
           <span className={styles.title}>Диван Клик-кляк</span>
 
