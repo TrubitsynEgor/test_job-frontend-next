@@ -8,10 +8,10 @@
 }
 
 .mobileUserPanel {
-	display: none;
+	display: none !important;
 
 	@media (max-width: 600px) {
-		display: flex;
+		display: flex !important;
 
 	}
 

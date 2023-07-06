@@ -12,7 +12,7 @@ import {
   UserPanel,
 } from '@/shared'
 import { cities, menuItems, phones } from './consts'
-import { useParams, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import styles from './Header.module.scss'
 import { BsSearch } from 'react-icons/bs'
 import cn from 'classnames'
@@ -22,7 +22,6 @@ interface HeaderProps extends DetailsHeadingProps {}
 
 export const Header: FC<HeaderProps> = ({ className }) => {
   const pathname = usePathname()
-  const { id } = useParams()
   const [value, setValue] = useState('')
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -61,7 +60,6 @@ export const Header: FC<HeaderProps> = ({ className }) => {
               [styles.open]: menuIsOpen,
             })}
             menuItems={menuItems}
-            id={id}
             pathname={pathname}
           />
         </div>

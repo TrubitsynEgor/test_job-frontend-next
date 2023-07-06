@@ -1,12 +1,13 @@
 {
-  "name": "test_job-frontend-next",
+  "name": "practice",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm run server\"  \"next dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server -w server/db.json -p 3001"
   },
   "dependencies": {
     "@types/node": "20.4.0",

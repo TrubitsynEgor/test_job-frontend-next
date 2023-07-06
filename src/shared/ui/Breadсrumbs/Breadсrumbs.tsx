@@ -3,24 +3,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import cn from 'classnames'
 import styles from './Breadсrumbs.module.scss'
-
-interface IPathObj {
-  sofas: string
-  chairs: string
-}
-
-export const convertPathName = (value: string) => {
-  const pathObj = {
-    sofas: 'Диваны',
-    chairs: 'Стулья',
-  } as IPathObj
-
-  for (let k in pathObj) {
-    if (k === value) {
-      return pathObj[k as keyof IPathObj]
-    }
-  }
-}
+import { convertPathName } from '@/helpers'
 
 interface BreadсrumbsProps extends DetailsUlProps {
   pathname: string

@@ -14,7 +14,6 @@ interface IMenuItems {
 interface NavProps extends DetailsDivProps {
   menuItems: IMenuItems[]
   pathname: string
-  id: string
 }
 
 export const Nav: FC<NavProps> = ({ menuItems, pathname, id, className }) => {
@@ -27,8 +26,7 @@ export const Nav: FC<NavProps> = ({ menuItems, pathname, id, className }) => {
               <Link
                 href={item.href}
                 className={cn(styles.link, {
-                  [styles.active]:
-                    pathname === item.href || pathname === `${item.href}/${id}`,
+                  [styles.active]: pathname === item.href,
                 })}
               >
                 {item.label}
