@@ -1,5 +1,6 @@
 'use client'
 import {
+  Burger,
   Container,
   DetailsHeadingProps,
   Input,
@@ -22,10 +23,16 @@ export const Header: FC<HeaderProps> = ({ className }) => {
   const pathname = usePathname()
   const { id } = useParams()
   const [value, setValue] = useState('')
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
     <header className={cn(styles.header, className)}>
       <Container>
+        <Burger
+          active={menuIsOpen}
+          handleMenu={setMenuIsOpen}
+          className={styles.burger}
+        />
         <div className={styles.top}>
           <div className={styles.left}>
             <Logo className={styles.logo} />
@@ -44,11 +51,18 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           <div className={styles.right}>
             <Location cities={cities} />
             <Phone phones={phones} />
-            <UserPanel />
+            <UserPanel className={styles.userPanel} />
           </div>
         </div>
         <div className={styles.bottom}>
-          <Nav menuItems={menuItems} id={id} pathname={pathname} />
+          <Nav
+            className={cn(styles.nav, {
+              [styles.open]: menuIsOpen,
+            })}
+            menuItems={menuItems}
+            id={id}
+            pathname={pathname}
+          />
         </div>
       </Container>
     </header>

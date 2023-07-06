@@ -15,7 +15,7 @@ export const Logo: FC<LogoProps> = ({ className }) => {
       aria-label="Ссылка на главную"
       className={cn(styles.logo, className)}
     >
-      <Image src={LogoImg} width={200} height={40} alt="Logo" />
+      <Image src={LogoImg} width={160} height={30} alt="Logo" />
     </Link>
   )
 }

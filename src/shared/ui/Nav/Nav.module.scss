@@ -1,1 +1,33 @@
-.list
+.list {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+
+}
+
+.mobileUserPanel {
+	display: none;
+
+	@media (max-width: 600px) {
+		display: flex;
+
+	}
+
+}
+
+.link {
+	color: var(--dark);
+	font-size: 20px;
+	transition: opacity .3s ease-in-out;
+
+	&:hover {
+		opacity: .6;
+	}
+
+	&.active {
+		color: turquoise;
+	}
+
+}

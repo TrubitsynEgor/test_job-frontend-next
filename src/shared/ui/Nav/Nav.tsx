@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import cn from 'classnames'
 import styles from './Nav.module.scss'
+import { UserPanel } from '../UserPanel/UserPanel'
 
 interface IMenuItems {
   id: number
@@ -23,11 +24,19 @@ export const Nav: FC<NavProps> = ({ menuItems, pathname, id, className }) => {
         {menuItems &&
           menuItems.map((item) => (
             <li key={item.id} className={styles.item}>
-              <Link href={item.href} className={styles.link}>
+              <Link
+                href={item.href}
+                className={cn(styles.link, {
+                  [styles.active]:
+                    pathname === item.href || pathname === `${item.href}/${id}`,
+                })}
+              >
                 {item.label}
               </Link>
             </li>
           ))}
+
+        <UserPanel className={styles.mobileUserPanel} />
       </ul>
     </nav>
   )

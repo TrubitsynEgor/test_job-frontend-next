@@ -57,6 +57,12 @@
 
 	background-color: var(--dark);
 
+	@media (max-width: 600px) {
+		left: 50%;
+		transform: translateX(-50%);
+		top: 36px;
+	}
+
 	&.active {
 		opacity: 1;
 		visibility: visible;

@@ -5,6 +5,10 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
+
+	@media (max-width: 600px) {
+		padding: 20px 0;
+	}
 }
 
 .top {
@@ -12,12 +16,24 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 32px;
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+
+	}
+
 }
 
 .left {
 	display: flex;
 	align-items: center;
 	gap: 60px;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+
+		gap: 30px;
+	}
 }
 
 .right {
@@ -25,19 +41,65 @@
 	align-items: center;
 	gap: 40px;
 	position: relative;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+
+
+	}
 }
 
-.logo {
-	transform: translateY(5px);
+.bottom {
+	padding-top: 40px;
 
 }
+
+.nav {
+	@media (max-width: 1024px) {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-1000px);
+		transition: transform .3s ease-in-out;
+
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 40px;
+
+
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 290px;
+		min-height: 100vh;
+		background-color: var(--dark);
+		z-index: 30;
+
+		& a {
+			color: var(--light);
+		}
+
+		&.open {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+		}
+	}
+
+}
+
+.logo {}
 
 .input {
-	width: 290px;
-	height: 40px;
+	width: 240px;
+	height: 30px;
 	position: relative;
 	padding-right: 40px;
-
+	transform: translateY(-4px);
 
 	&::placeholder {
 		text-align: center;
@@ -46,20 +108,45 @@
 
 
 	& svg {
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 		opacity: .5;
 		position: absolute;
-		left: 17%;
-		top: 20%;
+		left: 13%;
+		top: 34%;
 		transition: all .3s ease-in-out;
 
 
 	}
 
+	@media (max-width: 600px) {
+		transform: translate(-5px, -4px);
+
+	}
+
+
+	@media (max-width: 350px) {
+		width: 210px;
+	}
+
+
 }
 
 .focus svg {
-	transform: translateX(260px);
+	transform: translateX(230px);
+
+}
+
+.userPanel {
+	@media (max-width: 600px) {
+		display: none;
+	}
+
+}
+
+.burger {
+
+
+	@media (max-width: 1024px) {}
 
 }

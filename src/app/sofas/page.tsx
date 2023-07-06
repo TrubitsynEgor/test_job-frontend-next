@@ -2,8 +2,9 @@ import { Header } from '@/widgets'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
-    </main>
+      <h1>Sofas</h1>
+    </>
   )
 }

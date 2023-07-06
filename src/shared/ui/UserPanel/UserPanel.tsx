@@ -9,7 +9,7 @@ interface UserPanelProps extends DetailsDivProps {}
 
 export const UserPanel: FC<UserPanelProps> = ({ className }) => {
   return (
-    <div className={styles.userPanel}>
+    <div className={cn(styles.userPanel, className)}>
       <Link href={'/profile'}>
         <AiOutlineUser />
       </Link>
