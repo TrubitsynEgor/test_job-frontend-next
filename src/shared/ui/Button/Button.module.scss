@@ -1,0 +1,73 @@
+.button {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	border: none;
+	font-size: 20px;
+	transition: all .3s ease-in-out;
+	font-family: var(--comicNeue);
+
+	&:disabled {
+		opacity: .4;
+		cursor: not-allowed;
+	}
+
+	& svg {
+		margin-top: 6px;
+	}
+
+	&.primary {
+		color: var(--light);
+		background-color: var(--dark);
+
+		& svg {
+			fill: var(--light);
+
+		}
+
+		&:hover {
+			background-color: rgba(#000, 0.5);
+		}
+	}
+
+	&.ghost {
+		color: var(--dark);
+		background-color: transparent;
+		border: 1px solid var(--dark);
+
+		&:hover {
+			background-color: var(--dark);
+			color: var(--light);
+
+			& svg {
+				fill: var(--light);
+			}
+		}
+	}
+
+	&.link {
+		color: rgba(#000, 0.8);
+		text-decoration: underline;
+		background-color: transparent;
+		border: none;
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+	& .arrow {
+		margin-left: 10px;
+
+		&.down {
+			transform: rotate(90deg);
+			transition: all .3s ease-in-out;
+
+		}
+	}
+
+
+}

@@ -1,0 +1,64 @@
+.header {
+	padding: 40px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.logo {
+	transform: translateY(5px);
+
+}
+
+.input {
+	width: 290px;
+	height: 40px;
+	position: relative;
+	padding-right: 40px;
+
+
+	&::placeholder {
+		text-align: center;
+
+	}
+
+
+	& svg {
+		width: 30px;
+		height: 30px;
+		opacity: .5;
+		position: absolute;
+		left: 17%;
+		top: 20%;
+		transition: all .3s ease-in-out;
+
+
+	}
+
+}
+
+.focus svg {
+	transform: translateX(260px);
+
+}

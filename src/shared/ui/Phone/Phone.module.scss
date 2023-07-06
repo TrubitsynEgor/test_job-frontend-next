@@ -1,0 +1,73 @@
+.phone {
+	position: relative;
+}
+
+.mainPhone {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	& a {
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+}
+
+
+
+.btn {
+	padding: 0;
+	transform: translateY(-3px);
+
+	.active {
+		transform: rotate(90deg);
+	}
+
+	& svg {
+		fill: var(--dark);
+	}
+
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	transition: opacity .3s ease-in-out;
+
+	opacity: 0;
+	visibility: hidden;
+	padding: 0;
+	height: 0;
+
+
+	position: absolute;
+	left: 0;
+	top: 36px;
+	z-index: 15;
+	width: 230px;
+
+	background-color: var(--dark);
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		height: auto;
+		padding: 10px;
+	}
+
+}
+
+.item {
+	margin: 0;
+	padding: 0;
+}
+
+.changePhoneBtn {
+	color: var(--light) !important;
+}

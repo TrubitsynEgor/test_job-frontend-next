@@ -1,0 +1,44 @@
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.input {
+	border: 1px solid var(--dark);
+	padding: 12px 20px;
+	padding-right: 28px;
+	background-color: var(--light);
+	transition: border-color 0.15s ease-in-out;
+	outline: none;
+	color: var(--dark);
+	font-size: 20px;
+
+	&:focus {
+		outline: 2px solid var(--dark);
+	}
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 20px;
+		opacity: .7;
+
+		@media (max-width: 710px) {
+			font-size: 14px;
+		}
+
+	}
+
+	&.error {
+		border: 1px solid tomato;
+
+		&:focus {
+			outline: 2px solid red;
+		}
+	}
+}
+
+.label {
+	font-weight: 600;
+}
