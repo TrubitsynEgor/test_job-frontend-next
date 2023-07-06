@@ -1,0 +1,31 @@
+.breadсrumbs {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	padding-top: 40px;
+
+
+}
+
+.link {
+	color: rgba(#000, 0.5);
+	transition: all .3s ease-in-out;
+	position: relative;
+
+	&:hover {
+		color: turquoise;
+	}
+
+
+	&::after {
+		content: '/';
+		position: absolute;
+		right: -12px;
+		top: -1px;
+
+
+	}
+
+}

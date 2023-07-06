@@ -1,5 +1,6 @@
 'use client'
 import {
+  Breadсrumbs,
   Burger,
   Container,
   DetailsHeadingProps,
@@ -64,6 +65,8 @@ export const Header: FC<HeaderProps> = ({ className }) => {
             pathname={pathname}
           />
         </div>
+
+        <Breadсrumbs pathname={pathname} />
       </Container>
     </header>
   )
