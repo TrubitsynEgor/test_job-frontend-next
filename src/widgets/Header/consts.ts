@@ -19,9 +19,8 @@ export const cities = [
   { id: 6, label: 'Нижний Новгород' },
   { id: 7, label: 'Красноярск' },
   { id: 8, label: 'Самара' },
-  { id: 9, label: 'Уфа' },
-  { id: 10, label: 'Ростов-на-Дону' },
-  { id: 11, label: 'Челябинск' },
+  { id: 9, label: 'Ростов-на-Дону' },
+  { id: 10, label: 'Челябинск' },
 ]
 
 export const phones = [

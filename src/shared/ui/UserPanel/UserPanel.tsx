@@ -1,17 +1,24 @@
 import { DetailsDivProps } from '@/shared/types'
 import Link from 'next/link'
 import { FC } from 'react'
-
+import { AiOutlineUser, AiOutlineHeart } from 'react-icons/ai'
+import { SlBasket } from 'react-icons/sl'
+import cn from 'classnames'
+import styles from './UserPanel.module.scss'
 interface UserPanelProps extends DetailsDivProps {}
 
-const UserPanel: FC<UserPanelProps> = ({ className }) => {
+export const UserPanel: FC<UserPanelProps> = ({ className }) => {
   return (
-    <div>
-      <Link href={'/profile'}></Link>
-      <Link href={'/favorite'}></Link>
-      <Link href={'/cart'}></Link>
+    <div className={styles.userPanel}>
+      <Link href={'/profile'}>
+        <AiOutlineUser />
+      </Link>
+      <Link href={'/favorite'}>
+        <AiOutlineHeart />
+      </Link>
+      <Link href={'/cart'}>
+        <SlBasket />
+      </Link>
     </div>
   )
 }
-
-export default UserPanel

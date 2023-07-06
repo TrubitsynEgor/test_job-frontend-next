@@ -1,0 +1,18 @@
+.userPanel {
+	color: var(--dark);
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+
+
+	& svg {
+		width: 30px;
+		height: 30px;
+		transition: opacity .3s ease-in-out;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+}
