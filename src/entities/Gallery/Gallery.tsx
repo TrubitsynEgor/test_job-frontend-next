@@ -15,6 +15,7 @@ export const Gallery: FC<ProductDetailsProps> = ({ images, className }) => {
     <div className={cn(styles.gallery, className)}>
       <Container className={styles.container}>
         <Image
+          className={styles.img}
           src={images[idx].path}
           alt="product image"
           width={720}
@@ -25,7 +26,7 @@ export const Gallery: FC<ProductDetailsProps> = ({ images, className }) => {
           {images.map((img, idx) => (
             <li key={img.id}>
               <Image
-                className={styles.img}
+                className={styles.controlImg}
                 onClick={() => setIdx(idx)}
                 src={img.path}
                 alt="product image"

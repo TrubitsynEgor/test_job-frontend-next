@@ -7,12 +7,22 @@
 
 	flex-wrap: wrap;
 	padding: 50px 0;
+
+
 }
 
 .item {
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
+
+	@media (max-width: 600px) {}
+}
+
+.img {
+	@media (max-width: 350px) {
+		width: 290px;
+	}
 
 }
 

@@ -1,10 +1,23 @@
 .productDetails {
 	padding: 100px 0;
+
+	@media (max-width: 600px) {
+		padding: 40px 0;
+
+
+	}
 }
 
 .box {
 	display: flex;
 	gap: 40px;
+
+	@media (max-width: 998px) {
+		flex-direction: column;
+		align-items: center;
+
+	}
+
 }
 
 .description {

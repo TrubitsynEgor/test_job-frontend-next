@@ -2,11 +2,35 @@
 	font-size: 56px;
 	text-align: center;
 
+	@media (max-width:768px) {
+		font-size: 48px;
+	}
+
+	@media (max-width:600px) {
+		font-size: 36px;
+	}
+
 	&.h2 {
 		font-size: 44px;
+
+		@media (max-width:768px) {
+			font-size: 38px;
+		}
+
+		@media (max-width:600px) {
+			font-size: 30px;
+		}
 	}
 
 	&.h3 {
 		font-size: 32px;
+
+		@media (max-width:768px) {
+			font-size: 26;
+		}
+
+		@media (max-width:600px) {
+			font-size: 20px;
+		}
 	}
 }

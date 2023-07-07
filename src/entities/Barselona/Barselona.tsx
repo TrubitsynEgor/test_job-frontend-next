@@ -21,6 +21,7 @@ export const Barselona: FC<BarselonaProps> = ({ className }) => {
         </div>
         <div className={styles.right}>
           <Image
+            className={styles.img}
             src={contentImg}
             width={800}
             height={300}

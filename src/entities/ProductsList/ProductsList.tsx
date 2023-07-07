@@ -23,6 +23,7 @@ export const ProductsList: FC<ProductsListProps> = ({
         <li key={el.id} className={styles.item}>
           <div className={styles.image}>
             <Image
+              className={styles.img}
               src={el.images[0].path}
               width={330}
               height={200}

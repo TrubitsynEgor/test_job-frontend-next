@@ -56,6 +56,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         </div>
         <div className={styles.bottom}>
           <Nav
+            setMenuIsOpen={setMenuIsOpen}
             className={cn(styles.nav, {
               [styles.open]: menuIsOpen,
             })}
