@@ -1,0 +1,11 @@
+.characteristicTable {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.bold {
+	padding-right: 10px;
+
+	font-weight: 700;
+}
