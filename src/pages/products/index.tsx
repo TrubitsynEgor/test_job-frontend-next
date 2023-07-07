@@ -3,20 +3,20 @@ import { Header, Products } from '@/widgets'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps<{
-  repo: IProducts[]
+  products: IProducts[]
 }> = async () => {
   const res = await fetch('http://localhost:3001/products/')
-  const repo = await res.json()
-  return { props: { repo } }
+  const products = await res.json()
+  return { props: { products } }
 }
 
-export default function Sofas({
-  repo,
+export default function ProductsPage({
+  products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Header />
-      <Products products={repo} />
+      <Products products={products} />
     </>
   )
 }

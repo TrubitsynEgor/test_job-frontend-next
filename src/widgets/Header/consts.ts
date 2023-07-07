@@ -1,13 +1,13 @@
 export const menuItems = [
-  { id: 1, label: 'Новинки', href: '/new' },
-  { id: 2, label: 'Акции', href: '/stock' },
-  { id: 3, label: 'Диваны', href: '/sofas' },
-  { id: 4, label: 'Кресла', href: '/armchairs' },
-  { id: 5, label: 'Кровати', href: '/beds' },
-  { id: 6, label: 'Стулья', href: '/chairs' },
-  { id: 7, label: 'Столы', href: '/tables' },
-  { id: 8, label: 'Матрасы', href: '/mattresses' },
-  { id: 9, label: 'Пуфы', href: '/puffs' },
+  { id: 1, label: 'Новинки', href: '/products/new' },
+  { id: 2, label: 'Акции', href: '/products/stock' },
+  { id: 3, label: 'Диваны', href: '/products/sofas' },
+  { id: 4, label: 'Кресла', href: '/products/armchairs' },
+  { id: 5, label: 'Кровати', href: '/products/beds' },
+  { id: 6, label: 'Стулья', href: '/products/chairs' },
+  { id: 7, label: 'Столы', href: '/products/tables' },
+  { id: 8, label: 'Матрасы', href: '/products/mattresses' },
+  { id: 9, label: 'Пуфы', href: '/products/puffs' },
 ]
 
 export const cities = [

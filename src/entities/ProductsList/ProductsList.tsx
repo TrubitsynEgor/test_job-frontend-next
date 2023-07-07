@@ -45,7 +45,7 @@ export const ProductsList: FC<ProductsListProps> = ({
           <Button
             className={styles.btn}
             appearance="ghost"
-            onClick={() => router.push(`/sofas/${el.id}`)}
+            onClick={() => router.push(`/products/${el.id}`)}
           >
             Посмотреть
           </Button>

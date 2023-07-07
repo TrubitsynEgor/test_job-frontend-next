@@ -1,11 +1,15 @@
 interface IPathObj {
   sofas: string
-  chairs: string
+  products: string
 }
 export const convertPathName = (value: string) => {
+  const el = value.split('/')[0]
+  if (+el) {
+    return 'Имя дивана'
+  }
   const pathObj = {
     sofas: 'Диваны',
-    chairs: 'Стулья',
+    products: 'Продукция',
   } as IPathObj
 
   for (let k in pathObj) {

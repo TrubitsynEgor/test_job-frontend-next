@@ -8,3 +8,9 @@ export interface IProducts {
   price: number
   images: IProductImage[]
 }
+
+export interface IColor {
+  id: number
+  label: string
+  image: string
+}

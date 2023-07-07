@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	gap: 40px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	& li {
+		cursor: pointer;
+	}
+}

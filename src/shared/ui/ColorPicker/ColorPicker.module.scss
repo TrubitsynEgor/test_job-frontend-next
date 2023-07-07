@@ -1,0 +1,16 @@
+.colorPicker {
+	display: flex;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+
+}
+
+.img {
+	border-radius: 50%;
+	padding: 3px;
+
+	&.active {
+		border: 1px solid var(--dark);
+	}
+}
