@@ -1,4 +1,119 @@
+.productInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+
+}
+
+.reviewsBox {
+	display: flex;
+	gap: 10px;
+
+	& a {
+		font-size: 18px;
+		text-decoration: underline;
+		transition: opacity .3s ease-in-out;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+}
+
+.priceBox {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.price {
+	font-size: 24px;
+	color: hsl(207, 100%, 50%);
+	font-weight: 700;
+}
+
+.prevPrice {
+	opacity: .3;
+	text-decoration: line-through;
+}
+
+.discount {
+	font-size: 14px;
+	color: rgba(#000, 0.8);
+	padding: 3px;
+	border: 1px solid rgba(#000, 0.8);
+	border-left: none;
+	position: relative;
+
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: -3px;
+		top: -1px;
+		width: 1px;
+		height: 13px;
+		background-color: rgba(#000, 0.5);
+		transform: rotate(30deg);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: -3px;
+		bottom: -1px;
+		width: 1px;
+		height: 13px;
+		background-color: rgba(#000, 0.5);
+		transform: rotate(-30deg);
+	}
+
+
+}
+
 .title {
 	margin: 0;
+	text-align: left;
+}
 
+.caption {
+	font-size: 18px;
+}
+
+.fillerBox {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.fillerList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+
+}
+
+.fillerBtn {
+	padding: 2px 10px;
+	font-size: 18px;
+}
+
+.deliveryCaption {
+	font-size: 18px;
+	display: block;
+	padding-bottom: 10px;
+
+
+}
+
+.deliveryTable {
+	border-spacing: 10px 10px;
+}
+
+.btn {
+	display: inline-block;
+	width: 80%;
 }

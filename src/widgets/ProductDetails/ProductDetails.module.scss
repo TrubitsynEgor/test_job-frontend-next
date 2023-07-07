@@ -1,4 +1,9 @@
-.container {
+.box {
 	display: flex;
 	gap: 40px;
+}
+
+.description {
+	max-width: 950px;
+	font-size: 18px;
 }

@@ -29,8 +29,8 @@ export const Gallery: FC<ProductDetailsProps> = ({ images, className }) => {
                 onClick={() => setIdx(idx)}
                 src={img.path}
                 alt="product image"
-                width={160}
-                height={80}
+                width={120}
+                height={50}
               />
             </li>
           ))}

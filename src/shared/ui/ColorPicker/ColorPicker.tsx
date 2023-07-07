@@ -11,7 +11,7 @@ interface ColorPickerProps extends DetailsUlProps {
 export const ColorPicker: FC<ColorPickerProps> = ({ className, colors }) => {
   const [currentColor, setCurrentColor] = useState(colors[0].label)
   return (
-    <>
+    <div className={styles.box}>
       <span>{currentColor}</span>
       <ul className={cn(styles.colorPicker)}>
         {colors.map((color) => (
@@ -19,8 +19,8 @@ export const ColorPicker: FC<ColorPickerProps> = ({ className, colors }) => {
             <Image
               src={color.image}
               alt="color"
-              width={15}
-              height={15}
+              width={25}
+              height={25}
               onClick={() => setCurrentColor(color.label)}
               className={cn(styles.img, {
                 [styles.active]: currentColor === color.label,
@@ -29,6 +29,6 @@ export const ColorPicker: FC<ColorPickerProps> = ({ className, colors }) => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
