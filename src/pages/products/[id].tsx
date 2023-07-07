@@ -1,5 +1,5 @@
 import { IProducts } from '@/shared'
-import { Header, ProductDetails } from '@/widgets'
+import { Characteristics, Header, ProductDetails } from '@/widgets'
 import type {
   InferGetStaticPropsType,
   GetStaticProps,
@@ -40,6 +40,8 @@ export default function Sofas({
       <Header />
 
       <ProductDetails product={product} />
+
+      <Characteristics />
     </>
   )
 }

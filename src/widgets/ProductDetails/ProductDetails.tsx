@@ -11,7 +11,7 @@ interface ProductDetailsProps extends DetailsDivProps {
 
 export const ProductDetails: FC<ProductDetailsProps> = ({ product }) => {
   return (
-    <section>
+    <section className={styles.productDetails}>
       <Container className={styles.container}>
         <div className={styles.box}>
           <Gallery images={product.images} />

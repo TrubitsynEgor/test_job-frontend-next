@@ -66,18 +66,20 @@ export const ProductInfo: FC<ProductInfoProps> = ({
         <span className={styles.deliveryCaption}>Доставка</span>
 
         <table className={styles.deliveryTable}>
-          <tr className={styles.row}>
-            <td>По Челябинску</td>
-            <th>{priceRu(700)}</th>
-          </tr>
-          <tr>
-            <td>По России</td>
-            <th>от {priceRu(1000)}</th>
-          </tr>
-          <tr>
-            <td>Самовывоз</td>
-            <th>Бесплатно</th>
-          </tr>
+          <tbody>
+            <tr className={styles.row}>
+              <td>По Челябинску</td>
+              <th>{priceRu(700)}</th>
+            </tr>
+            <tr>
+              <td>По России</td>
+              <th>от {priceRu(1000)}</th>
+            </tr>
+            <tr>
+              <td>Самовывоз</td>
+              <th>Бесплатно</th>
+            </tr>
+          </tbody>
         </table>
       </div>
 
