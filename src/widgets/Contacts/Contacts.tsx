@@ -20,7 +20,7 @@ export const Contacts: FC<ContactsProps> = ({ className }) => {
           <span className={styles.callUsCaption}>
             Ежедневно с 9:00 до 18:00
           </span>
-          <Link href={'tell:+79617617826'}>
+          <Link href={'tel:+79617617826'}>
             <Button appearance="ghost">Позвонить</Button>
           </Link>
         </div>
