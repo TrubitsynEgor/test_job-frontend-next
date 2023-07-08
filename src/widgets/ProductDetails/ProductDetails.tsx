@@ -1,6 +1,5 @@
 import { Container, DetailsDivProps, IProducts } from '@/shared'
 import { FC } from 'react'
-import cn from 'classnames'
 import styles from './ProductDetails.module.scss'
 import { Gallery, ProductInfo } from '@/entities'
 import { colors, fillers } from './consts'

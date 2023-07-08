@@ -59,12 +59,9 @@
 		transform: translateY(-1000px);
 		transition: transform .3s ease-in-out;
 
-
 		display: flex;
 		flex-direction: column;
 		padding-top: 40px;
-
-
 
 		position: absolute;
 		top: 0;
@@ -88,7 +85,6 @@
 
 }
 
-.logo {}
 
 .input {
 	width: 240px;
@@ -131,6 +127,9 @@
 .focus svg {
 	transform: translateX(230px);
 
+	@media (max-width: 350px) {
+		transform: translateX(207px);
+	}
 }
 
 .userPanel {

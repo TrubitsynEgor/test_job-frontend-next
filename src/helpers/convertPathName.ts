@@ -10,6 +10,14 @@ export const convertPathName = (value: string) => {
   const pathObj = {
     sofas: 'Диваны',
     products: 'Продукция',
+    new: 'Новинки',
+    armchairs: 'Кресла',
+    chairs: 'Стулья',
+    mattresses: 'Матрасы',
+    puffs: 'Пуфы',
+    stock: 'Акции',
+    tables: 'Столы',
+    beds: 'Кровати',
   } as IPathObj
 
   for (let k in pathObj) {

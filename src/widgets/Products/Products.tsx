@@ -3,7 +3,14 @@ import { usePathname } from 'next/navigation'
 import styles from './Products.module.scss'
 import cn from 'classnames'
 import { FC } from 'react'
-import { Container, DetailsUlProps, IProducts, Title } from '@/shared'
+import {
+  Button,
+  Container,
+  DetailsUlProps,
+  IProducts,
+  Pagination,
+  Title,
+} from '@/shared'
 import { convertPathName } from '@/helpers'
 import { Barselona, ProductsList } from '@/entities'
 
@@ -23,6 +30,10 @@ export const Products: FC<ProductsProps> = ({ className, products }) => {
       <Barselona />
       <Container>
         <ProductsList products={products} />
+        <Button className={styles.btn} appearance="ghost">
+          Посмотреть еще
+        </Button>
+        <Pagination />
       </Container>
     </section>
   )

@@ -1,6 +1,5 @@
-import cn from 'classnames'
 import styles from './Characteristics.module.scss'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import {
   Button,
   CharacteristicTable,

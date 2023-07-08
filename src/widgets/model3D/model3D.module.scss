@@ -1,11 +1,28 @@
 .model3D {
 	padding-top: 100px;
-	padding-bottom: 130px;
+	padding-bottom: 150px;
 
 	background-color: rgba(grey, .1);
 
 	@media (max-width: 600px) {
 		padding-top: 40px;
 		padding-bottom: 90px;
+	}
+}
+
+.title {
+	margin-bottom: 20px;
+
+}
+
+.caption {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 575px;
+	opacity: .6;
+
+	& span {
+		font-weight: 700;
 	}
 }

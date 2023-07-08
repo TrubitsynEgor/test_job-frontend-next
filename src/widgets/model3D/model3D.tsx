@@ -11,7 +11,11 @@ export const Model3D: FC<model3DProps> = ({ className }) => {
   return (
     <section className={cn(styles.model3D, className)}>
       <Container>
-        <Title>Посмотри 3D модель</Title>
+        <Title className={styles.title}>Посмотри 3D модель</Title>
+        <span className={styles.caption}>
+          Мы разработали для вас <span>3D модель</span> Некоторых товаров чтобы
+          вы могли посмотреть как ваша модель впишется в интерьер
+        </span>
         <Slider models={modelThreeD} slidesPerView={slidesPerView} />
       </Container>
     </section>
