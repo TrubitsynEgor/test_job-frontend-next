@@ -39,7 +39,7 @@ export const ProductInfo: FC<ProductInfoProps> = ({
 
       <div className={styles.reviewsBox}>
         <Rating rating={rating} setRating={setRating} isEditable />
-        <Link href={`${params}#reviews`}>5 отзывов</Link>
+        <Link href={`#`}>5 отзывов</Link>
       </div>
 
       <PriceBox price={price} />
