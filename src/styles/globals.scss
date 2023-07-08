@@ -44,3 +44,14 @@ a {
   max-width: 100%;
   -webkit-box-orient: vertical;
 }
+
+.swiper-pagination {
+  position: absolute;
+  right: 50px;
+  top: -6px;
+}
+
+.swiper-pagination-current {
+  font-size: 24px;
+  font-weight: bold;
+}

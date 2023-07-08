@@ -15,7 +15,7 @@ export const Products: FC<ProductsProps> = ({ className, products }) => {
   const pathname = usePathname()
 
   return (
-    <div className={cn(styles.products, className)}>
+    <section className={cn(styles.products, className)}>
       <Container>
         <Title>{convertPathName(pathname.replace('/', ''))}</Title>
         <ProductsList products={products} />
@@ -24,6 +24,6 @@ export const Products: FC<ProductsProps> = ({ className, products }) => {
       <Container>
         <ProductsList products={products} />
       </Container>
-    </div>
+    </section>
   )
 }

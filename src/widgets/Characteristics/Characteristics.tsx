@@ -15,7 +15,7 @@ interface CharacteristicsProps extends DetailsDivProps {}
 
 export const Characteristics: FC<CharacteristicsProps> = ({ className }) => {
   return (
-    <div className={styles.characteristics}>
+    <section className={styles.characteristics}>
       <Container className={styles.container}>
         <Title className={styles.title} tag="h2">
           Характиристики
@@ -37,6 +37,6 @@ export const Characteristics: FC<CharacteristicsProps> = ({ className }) => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }

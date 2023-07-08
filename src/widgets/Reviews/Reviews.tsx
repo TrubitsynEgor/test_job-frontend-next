@@ -1,18 +1,19 @@
-import { Container, DetailsDivProps } from '@/shared'
+import { Container, DetailsDivProps, Title } from '@/shared'
 import { FC } from 'react'
 import styles from './Reviews.module.scss'
 import cn from 'classnames'
 import { Slider } from '@/features'
-import { reviews } from './consts'
+import { reviews, slidesPerView } from './consts'
 
 interface ReviewsProps extends DetailsDivProps {}
 
 export const Reviews: FC<ReviewsProps> = ({ className }) => {
   return (
-    <div className={cn(styles.reviews, className)}>
+    <section className={cn(styles.reviews, className)}>
       <Container>
-        <Slider reviews={reviews} />
+        <Title>Отзывы</Title>
+        <Slider reviews={reviews} slidesPerView={slidesPerView} />
       </Container>
-    </div>
+    </section>
   )
 }
