@@ -36,7 +36,8 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 export const getStaticProps: GetStaticProps<{
   product: IProducts
 }> = async ({ params }) => {
-  const res = await fetch(`http://localhost:3001/products/${params.id}`)
+  const id = (params as ParsedUrlQuery).id
+  const res = await fetch(`http://localhost:3001/products/${id}`)
   const product = await res.json()
 
   return { props: { product } }

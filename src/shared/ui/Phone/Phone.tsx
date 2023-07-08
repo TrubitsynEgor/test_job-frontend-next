@@ -3,14 +3,13 @@ import { DetailsDivProps } from '@/shared/types'
 import cn from 'classnames'
 import { FC, useState } from 'react'
 import { IPhones } from '@/widgets'
-import Link from 'next/link'
 import { Button } from '../Button/Button'
 import { IoIosArrowForward } from 'react-icons/io'
 
 export const convertPhoneNumber = (value: string) => {
   return value
     .split('')
-    .filter((el) => !isNaN(el))
+    .filter((el: any) => !isNaN(el))
     .join('')
     .replaceAll(' ', '')
 }

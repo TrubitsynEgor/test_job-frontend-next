@@ -69,6 +69,7 @@ export const Slider: FC<SliderProps> = ({
           ? products.map((product) => (
               <SwiperSlide key={product.id}>
                 <ProductCard
+                  className="productCard"
                   img={product.images[0].path}
                   price={product.price}
                   id={product.id}
