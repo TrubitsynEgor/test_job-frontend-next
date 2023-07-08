@@ -1,0 +1,50 @@
+.priceBox {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.price {
+	font-size: 24px;
+	color: hsl(207, 100%, 50%);
+	font-weight: 700;
+}
+
+.prevPrice {
+	opacity: .3;
+	text-decoration: line-through;
+}
+
+.discount {
+	font-size: 14px;
+	color: rgba(#000, 0.8);
+	padding: 3px;
+	border: 1px solid rgba(#000, 0.8);
+	border-left: none;
+	position: relative;
+
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: -3px;
+		top: -1px;
+		width: 1px;
+		height: 13px;
+		background-color: rgba(#000, 0.5);
+		transform: rotate(30deg);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: -3px;
+		bottom: -1px;
+		width: 1px;
+		height: 13px;
+		background-color: rgba(#000, 0.5);
+		transform: rotate(-30deg);
+	}
+
+
+}

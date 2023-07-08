@@ -3,6 +3,7 @@ import {
   ColorPicker,
   DetailsDivProps,
   IColor,
+  PriceBox,
   Rating,
   Title,
 } from '@/shared'
@@ -41,11 +42,7 @@ export const ProductInfo: FC<ProductInfoProps> = ({
         <Link href={`${params}#reviews`}>5 отзывов</Link>
       </div>
 
-      <div className={styles.priceBox}>
-        <span className={styles.price}>{priceRu(price)}</span>
-        <span className={styles.prevPrice}>{priceRu(price)}</span>
-        <span className={styles.discount}>-10 %</span>
-      </div>
+      <PriceBox price={price} />
 
       <ColorPicker colors={colors} />
 

@@ -1,6 +1,6 @@
 import { Container, DetailsDivProps, Title } from '@/shared'
 import { FC } from 'react'
-import styles from './model3D.module.scss'
+import styles from './Model3D.module.scss'
 import cn from 'classnames'
 import { Slider } from '@/features'
 import { modelThreeD, slidesPerView } from './consts'

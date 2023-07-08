@@ -122,4 +122,5 @@ export const slidesPerView = {
   mobile: 1,
   tablet: 3,
   desktop: 4,
+  large: 4,
 }

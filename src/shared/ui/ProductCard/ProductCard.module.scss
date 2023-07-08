@@ -1,0 +1,27 @@
+.productCard {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px 0;
+
+	@media (max-width: 980px) {
+		align-items: center;
+	}
+
+}
+
+.img {
+	object-fit: contain;
+}
+
+.priceBox {}
+
+.btn {
+	align-self: start;
+	padding: 10px 30px;
+
+	@media (max-width: 768px) {
+		align-self: center;
+	}
+
+}

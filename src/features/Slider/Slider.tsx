@@ -1,4 +1,10 @@
-import { DetailsDivProps, IProductImage, ReviewCard } from '@/shared'
+import {
+  DetailsDivProps,
+  IProductImage,
+  IProducts,
+  ProductCard,
+  ReviewCard,
+} from '@/shared'
 import { FC } from 'react'
 import styles from './Slider.module.scss'
 import { IReviews } from '@/widgets/Reviews/consts'
@@ -13,15 +19,22 @@ type SlidesPerView = {
   mobile: number
   tablet: number
   desktop: number
+  large: number
 }
 
 interface SliderProps extends DetailsDivProps {
   reviews?: IReviews[]
   slidesPerView: SlidesPerView
   models?: IProductImage[]
+  products?: IProducts[]
 }
 
-export const Slider: FC<SliderProps> = ({ reviews, slidesPerView, models }) => {
+export const Slider: FC<SliderProps> = ({
+  reviews,
+  slidesPerView,
+  models,
+  products,
+}) => {
   return (
     <>
       <Swiper
@@ -42,13 +55,27 @@ export const Slider: FC<SliderProps> = ({ reviews, slidesPerView, models }) => {
           980: {
             slidesPerView: slidesPerView.desktop,
           },
+          1200: {
+            slidesPerView: slidesPerView.large,
+          },
         }}
       >
         <div className={styles.sliderNav}>
           <SwiperNavBtn direction="prev" />
           <SwiperNavBtn direction="next" />
         </div>
-        {reviews
+
+        {products
+          ? products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  img={product.images[0].path}
+                  price={product.price}
+                  id={product.id}
+                />
+              </SwiperSlide>
+            ))
+          : reviews
           ? reviews.map((review) => (
               <SwiperSlide key={review.id}>
                 <ReviewCard review={review} />
